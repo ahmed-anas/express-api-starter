@@ -1,0 +1,140 @@
+{
+	"variables": [],
+	"info": {
+		"name": "express-api-starter",
+		"_postman_id": "b44779ee-75fa-0da4-f96a-b900e1d228c9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"url": "http://localhost:3000/auth/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin2@admin.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "displayName",
+							"value": "AHmed Anas",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "role",
+							"value": "business",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"url": "http://localhost:3000/auth/signin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin2@admin.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "verify",
+			"request": {
+				"url": "http://localhost:3000/auth/verify",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoibWVtYmVyIiwiaWF0IjoxNDkyNTA1OTUwLCJleHAiOjE0OTI1MTA5NTB9.9xZf-nKFO6rG2axB9LKR2iSUHu26Yo2HUWJuTD8bJoA",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "user_me",
+			"request": {
+				"url": "http://localhost:3000/user/me",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJyb2xlIjoibWVtYmVyIiwiaWF0IjoxNDkxOTEzNjQ1LCJleHAiOjE0OTE5MTg2NDV9.4h3N0Dk-J0q6zJB5vkbbhhcXerxFrD6vGrhM0cUQVKE",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"url": "http://localhost:3000/user/5",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcsInJvbGUiOiJtZW1iZXIiLCJpYXQiOjE0OTI2MTUyMzIsImV4cCI6MTQ5MjYyMDIzMn0.ZCp6_7YB65iCxeyZOmHdxw2D8QMypx3mieWSR-7p1Qw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

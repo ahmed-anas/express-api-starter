@@ -1,7 +1,7 @@
 var mysql = require('mysql');
 var config = require('./config');
 var pool = mysql.createPool(config.db.mysql);
-
+var Sequelize = require('sequelize');
 
 module.exports.getConnection = function () {
     return new Promise(function (resolve, reject) {
@@ -15,6 +15,25 @@ module.exports.getConnection = function () {
 }
 
 
+var sequelizeInstance = null;
+module.exports.getSequelize = function () {
+    if (!sequelizeInstance) {
+        sequelizeInstance = new Sequelize(config.db.mysql.database, config.db.mysql.user, config.db.mysql.password, {
+            host: config.db.mysql.host,
+            dialect: 'mysql',
+
+            pool: {
+                max: 10,
+                min: 0,
+                idle: 10000
+            },
+
+        });
+    }
+    return sequelizeInstance;
+
+
+}
 
 
 
